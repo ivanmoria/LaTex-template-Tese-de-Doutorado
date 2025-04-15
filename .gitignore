@@ -1,0 +1,33 @@
+# Arquivos auxiliares do LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# Arquivos de backup temporários
+*~
+*.bak
+*.backup
+*.tmp
+*.sav
+*.dvi
+
+# Arquivos de output
+*.pdf
+*.ps
+
+# Diretórios comuns gerados
+_build/
+output/

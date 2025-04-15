@@ -1,0 +1,109 @@
+
+\usepackage{lmodern}	       % Usa a fonte Latin Modern
+\usepackage[table]{xcolor} 
+\usepackage[utf8]{inputenc} % Suporte a UTF-8
+\usepackage[T1]{fontenc}    % Fontes com suporte a caracteres especiais
+\usepackage[portuguese]{babel} % Configuração para português
+\usepackage{caption} % Para adicionar legendas
+\usepackage[backend=biber, style=abnt]{biblatex} % Estilo ABNT
+\usepackage{minted}
+\usepackage{pdfpages}
+\usepackage{multirow} % Adicione este pacote
+\usepackage{chngcntr} % Para alterar a numeração dos contadores
+\usepackage{changepage} % Para ajustar recuos
+\usepackage{csquotes}       % Recomendado pelo biblatex para citações
+\usepackage{setspace}       % Controle de espaçamento
+\usepackage{ragged2e}       % Adiciona comandos para justificar texto
+\usepackage{hyperref}       % Habilita links clicáveis
+\usepackage{subcaption}   
+\usepackage[font=small]{caption}
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{xcolor} % Permite usar cores no texto
+\usepackage{graphicx} % Para incluir imagens
+\usepackage{float} % Para controle de posição das figuras
+
+% Definir cores em tons pastel
+\definecolor{color_200_200_200}{RGB}{200,200,200}
+\definecolor{pastelBlue}{RGB}{135, 206, 250} % Azul pastel moderado
+\definecolor{pastelOrange}{RGB}{255, 178, 102} % Laranja pastel equilibrado
+\definecolor{pastelRed}{RGB}{240, 128, 128} % Vermelho pastel visível
+\definecolor{pastelGreen}{RGB}{144, 238, 144} % Verde pastel
+
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,amsthm}
+\usepackage{setspace}
+\usepackage{pdfpages} 
+\usepackage{hyperref}
+\usepackage{adjustbox}
+\usepackage{titling} % Para personalizar o título
+\usepackage{titlesec}
+\usepackage{tocloft} % Para controle do índice
+\usepackage{geometry}
+\usepackage{etoolbox}
+\usepackage{xstring}
+\usepackage{hyphenat}
+\DeclareGraphicsExtensions{.png,.jpg,.pdf}
+
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries}{}{0pt}{} % Define o estilo do título
+
+% Ajustando as margens
+\geometry{
+  top=3cm,     % Margem superior de 2cm
+  bottom=2cm,  % Margem inferior de 2cm
+  left=3cm,    % Margem esquerda de 2cm
+  right=2cm    % Margem direita de 2cm
+}
+
+% Configurações do Hyperref
+\hypersetup{
+    colorlinks=true,       % Links coloridos
+    linkcolor=blue,        % Cor para links internos
+    citecolor=blue2,        % Cor para citações
+    urlcolor=blue,         % Cor para URLs
+    filecolor=magenta,     
+    breaklinks=true        % Permite que os links longos sejam quebrados
+}
+\definecolor{blue}{RGB}{41,5,195}
+\definecolor{blue2}{RGB}{41,5,155}
+% Ajuste para melhorar a quebra de links
+\Urlmuskip=0mu plus 1mu
+
+\addbibresource{bib.bib}    % Arquivo .bib com as referências 
+
+% Justificar a bibliografia
+\renewcommand*{\bibfont}{\sloppy\justifying\small\singlespacing}
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.5cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{1.5cm}  % tente também \onelineskip
+
+
+% titulo central
+\newcommand{\centersection}[1]{
+    \begin{center}
+        \textbf{\large #1}
+    \end{center}
+}
+\counterwithout{figure}{chapter} % Remove a dependência de capítulos na numeração das figuras
+\renewcommand{\listingscaption}{Código}
+\renewcommand{\listoflistingscaption}{Lista de Códigos}
+
+
+% Redefinindo o ambiente quote globalmente
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{%
+  \begin{adjustwidth}{4cm}{0cm} % Recuo de 4 cm à esquerda e nenhum ajuste à direita
+  \fontsize{10}{12}\selectfont % Fonte com tamanho 10pt e espaçamento de linha 12pt
+}
+
+\AtEndEnvironment{quote}{
+  \end{adjustwidth} % Fecha o ambiente adjustwidth
+}

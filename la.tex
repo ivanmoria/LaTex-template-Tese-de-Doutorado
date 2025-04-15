@@ -1,0 +1,119 @@
+\documentclass[12pt,oneside,a4paper]{report}
+
+\input{arquivos/config/con}
+\input{arquivos/config/dados}
+\graphicspath{{arquivos/figuras/}}
+
+% Definindo os metadados do PDF
+\hypersetup{
+    pdftitle={Tecnologias de Extração e Processamento de Informações Musicais em Musicoterapia: Microanálises de Vestígios Musicais e possíveis interfaces com a Cognição Social},
+    pdfauthor={Ivan Moriá Borges Rodrigues},
+    pdfsubject={Tese de Doutorado em Música Univesidade Federal de Minas Gerais},
+    pdfkeywords={Music Information Retrieval, Musicoterapia, Música e Tecnologia, Análise Musicoterapêutica}}
+
+\begin{document}
+
+\include{arquivos/textos/capa}
+
+% Ficha Catalográfica
+%\includepdf{Arquivos/Ficha_Catalografica.pdf}
+
+% -------------------------------------------------
+% ELEMENTOS PRÉ-Textuais
+% -------------------------------------------------
+
+% Folha de aprovação 
+%\include{arquivos/textos/pre/aprova}
+
+% Dedicatória
+\include{arquivos/textos/dedica}
+
+% Agradecimentos
+\include{arquivos/textos/agradece}
+
+% Epígrafe
+\include{arquivos/textos/epigrafe}
+
+% Resumo
+\include{arquivos/textos/resumo}
+
+% Abstract
+\include{arquivos/textos/abstract}
+
+% Lista de Figuras e Tabelas
+%\addcontentsline{toc}{section}{Lista de Figuras} 
+\listoffigures % Gera a lista de figuras
+\newpage % Nova página para separar o conteúdo
+
+%\addcontentsline{toc}{section}{Lista de Tabelas} 
+\listoftables % Gera a lista de tabelas
+\newpage % Nova página para separar o conteúdo
+
+% Lista de Siglas
+%Lista de Símbolos
+% Lista de códigos
+\listoflistings\newpage
+
+% ------------------------------------
+% SUMÁRIO
+% ------------------------------------
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents
+\cleardoublepage\pagenumbering{arabic}
+\setcounter{page}{5}  % Começa a numeração romana a partir de 1
+
+%-------------------------------------------------
+% CAPÍTULOS
+%-------------------------------------------------
+
+%-------------------------------------------------
+% Primeira Parte
+\include{arquivos/capitulos/1}
+%-------------------------------------------------
+
+%Introdução
+\include{arquivos/capitulos/motivos}
+
+%Capítulo 1 - Prelude - Definindo conceitos
+\include{arquivos/capitulos/intro}
+
+% Restabelece a numeração de páginas a partir daqui
+%\pagestyle{plain}
+%Capítulo 2 - Allemande (MIR-MT)
+\include{arquivos/capitulos/allemande}
+
+%-------------------------------------------------
+% Segunda Parte
+\include{arquivos/capitulos/2}
+%-------------------------------------------------
+% Apresentar o software aqui como anexo
+
+%Capítulo 2- Metodologia
+\include{arquivos/capitulos/metodologia}
+
+%-------------------------------------------------
+% Terceira Parte
+\include{arquivos/capitulos/3}
+%-------------------------------------------------
+
+% Capítulo 3 - Resultados
+\include{arquivos/capitulos/resultados}
+
+% Capítulo 3 - Discussão
+\include{arquivos/capitulos/discussao}
+
+% Capítulo 4 - Conclusão
+\include{arquivos/capitulos/conclusao}
+
+% REFERÊNCIAS BIBLIOGRÁFICAS 
+\section{Bibliografia}
+\printbibliography[heading=none]
+\newpage
+
+%  ITENS PÓS-TEXTUAIS  %
+% Anexos
+%\includepdf[pages=-]{arquivos/anexos/artigoincantare.pdf}
+
+% Apêndices
+
+\end{document}
