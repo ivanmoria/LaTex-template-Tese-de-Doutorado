@@ -19,7 +19,8 @@
 *.lol
 *.xml
 *.run
-*.DS_Store
+*.run.xml
+
 # Arquivos de backup temporários
 *~
 *.bak
@@ -36,3 +37,5 @@
 _build/
 _minted/
 output/
+
+.DS_Store
