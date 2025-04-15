@@ -30,7 +30,7 @@
 *.dvi
 
 # Arquivos de output
-*.pdf
+
 *.ps
 
 # Diretórios comuns gerados
