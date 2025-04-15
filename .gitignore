@@ -15,7 +15,11 @@
 *.snm
 *.vrb
 *.xdv
-
+*.bcf
+*.lol
+*.xml
+*.run
+*.DS_Store
 # Arquivos de backup temporários
 *~
 *.bak
@@ -30,4 +34,5 @@
 
 # Diretórios comuns gerados
 _build/
+_minted/
 output/
