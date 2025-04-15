@@ -1,8 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{numpy}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{np}
-    \PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{pandas}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{pd}
-    \PYG{n}{tabela} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{local\PYGZus{}do\PYGZus{}arquivo}\PYG{o}{.}\PYG{n}{csv}\PYG{p}{\PYGZcb{}}
-    \PYG{n}{dados} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{n}{tabela}\PYG{p}{,} \PYG{n}{sep}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ }\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-    \PYG{n}{t} \PYG{o}{=} \PYG{n}{dados}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Tempo}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]}
-    \PYG{n}{t\PYGZus{}diff} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{diff}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Inter\PYGZhy{}Onser\PYGZhy{}Interval}
-\end{MintedVerbatim}
